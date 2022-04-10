@@ -13,6 +13,7 @@ public class GuiLogin implements ActionListener {
     private static JButton buttonLog;
     private static JButton buttonExit;
     private static JLabel success;
+    static JCheckBox showPassword=new JCheckBox("Show Password");
 
     public static void main(String[] args) {
         JPanel panel = new JPanel();
@@ -48,7 +49,7 @@ public class GuiLogin implements ActionListener {
 
 
         buttonExit = new JButton("Exit");
-        buttonExit.setBounds(10,110,80,25);
+        buttonExit.setBounds(10,180,80,25);
         buttonExit.addActionListener(new GuiLogin());
         panel.add(buttonExit);
 
@@ -56,8 +57,10 @@ public class GuiLogin implements ActionListener {
         success = new JLabel("");
         success.setBounds(10,110,300,25);
 
+        showPassword.setBounds(120,80,175,30);
+        panel.add(showPassword);
         panel.add(success);
-
+//        frame.setResizable(false);
         frame.setVisible(true);
 
     }
@@ -69,8 +72,15 @@ public class GuiLogin implements ActionListener {
 
 
 
+
         if(user.equals("Abcd") && password.equals("1245l")) {
             success.setText("Login successful!");
         }
+
+
+        if((!user.equals("Abcd")) || (!password.equals("1245l"))) {
+            success.setText("Login unsuccessful!");
+        }
+
     }
 }
