@@ -10,7 +10,8 @@ public class GuiLogin implements ActionListener {
     private static JTextField userText;
     private static JLabel passwordLabel;
     private static JPasswordField passwordText;
-    private static JButton button;
+    private static JButton buttonLog;
+    private static JButton buttonExit;
     private static JLabel success;
 
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class GuiLogin implements ActionListener {
 
         frame.setSize(200,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(panel);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            frame.add(panel);
 
         panel.setLayout(null);
 
@@ -40,10 +41,17 @@ public class GuiLogin implements ActionListener {
         passwordText.setBounds(100,50,165,25);
         panel.add(passwordText);
 
-        button = new JButton("Login");
-        button.setBounds(10,80,80,25);
-        button.addActionListener(new GuiLogin());
-        panel.add(button);
+        buttonLog = new JButton("Login");
+        buttonLog.setBounds(10,80,80,25);
+        buttonLog.addActionListener(new GuiLogin());
+        panel.add(buttonLog);
+
+
+        buttonExit = new JButton("Exit");
+        buttonExit.setBounds(10,110,80,25);
+        buttonExit.addActionListener(new GuiLogin());
+        panel.add(buttonExit);
+
 
         success = new JLabel("");
         success.setBounds(10,110,300,25);
