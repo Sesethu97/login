@@ -40,8 +40,8 @@ public class GuiLogin implements ActionListener {
 
         passwordText = new JPasswordField();
         passwordText.setBounds(100,50,165,25);
-        passwordText.setEchoChar('*');
-        passwordText.getEchoChar();
+
+
         panel.add(passwordText);
 
         buttonLog = new JButton("Login");
@@ -83,6 +83,13 @@ public class GuiLogin implements ActionListener {
         if((!user.equals("Abcd")) || (!password.equals("1245l"))) {
             success.setText("Login unsuccessful!");
         }
+        if(showPassword.getText().equals("")){
+            passwordText.setEchoChar((char)0);
+            showPassword.setText("set");
+        }else {
+            passwordText.setEchoChar('*');
+            showPassword.setText("");
 
+        }
     }
 }
