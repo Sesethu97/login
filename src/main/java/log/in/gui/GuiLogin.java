@@ -2,6 +2,7 @@ package log.in.gui;
 
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,6 +15,7 @@ public class GuiLogin implements ActionListener {
     private static JButton buttonExit;
     private static JLabel success;
     static JCheckBox showPassword=new JCheckBox("Show Password");
+    static String msg = "Login details";
 
     public static void main(String[] args) {
         JPanel panel = new JPanel();
@@ -63,7 +65,10 @@ public class GuiLogin implements ActionListener {
         panel.add(showPassword);
         panel.add(success);
 //        frame.setResizable(false);
+        frame.setTitle(msg);
+        frame.setBackground(Color.GRAY);
         frame.setVisible(true);
+
 
     }
 
