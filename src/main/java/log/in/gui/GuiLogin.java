@@ -40,6 +40,8 @@ public class GuiLogin implements ActionListener {
 
         passwordText = new JPasswordField();
         passwordText.setBounds(100,50,165,25);
+        passwordText.setEchoChar('*');
+        passwordText.getEchoChar();
         panel.add(passwordText);
 
         buttonLog = new JButton("Login");
